@@ -1,34 +1,18 @@
 <script setup>
-import { onMounted } from 'vue';
 import heroImg from '../assets/Illustration.webp'
 import Button from './Button.vue'
 import Ptag from './Ptag.vue'
-import { gsap } from "gsap";
-    
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { SplitText } from "gsap/SplitText";
-
-gsap.registerPlugin(ScrollTrigger,SplitText);
-
-onMounted(() => {
-  gsap.from("#heroId", {
-    duration: 0.8,
-    y: 40,
-    opacity: 0,
-    ease: "power3.out"
-  })
-})
 </script>
 
 <template>
 
-    <section class="w-full
+    <section  class="w-full
             gap-[4.524rem]
             pt-[4.176rem] pb-[4.176rem]
             px-4 md:px-[6.264rem]
             bg-[#F5F7FA]
             opacity-100">
-        <div  id="heroId" class="flex justify-center items-center">
+        <div class="flex justify-center items-center">
             <div class="
                 w-52
                 md:w-[20rem]

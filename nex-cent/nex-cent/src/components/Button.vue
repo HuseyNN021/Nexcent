@@ -11,8 +11,6 @@ const props = defineProps({
 <template>
 
             <button class="
-            cursor-pointer
-            hover:bg-[#388E3B]
             w-[3.125rem]
             md:w-[4.167rem]
             lg:w-[6.597rem]

@@ -1,16 +1,10 @@
 <script setup>
-import { onMounted } from 'vue'
 import achievementImg1 from '../assets/AchievementImg1.png'
 import achievementImg2 from '../assets/AchievementImg2.png'
 import achievementImg3 from '../assets/AchievementImg3.png'
 import achievementImg4 from '../assets/AchievementImg4.png'
 import Htag2 from './Htag2.vue'
 import Ptag from './Ptag.vue'
-import { gsap } from "gsap"
-import ScrollTrigger from "gsap/ScrollTrigger"
-
-gsap.registerPlugin(ScrollTrigger)
-
 const achievementData=[
     {
         img: achievementImg1,
@@ -33,30 +27,12 @@ const achievementData=[
         title: 'Payments'
     },
 ]
-
-onMounted(()=>{
-   gsap.from(".achievementShow", {
-    scrollTrigger: {
-      trigger: ".achievementGsap",
-      start: "top 85%",
-      toggleActions: "play none none none"
-      // play = scroll-a çatanda animasiya et
-      // none = başqa heç nə etmə
-    },
-    duration: 0.9,
-    scale: 0.8,
-    opacity: 0,
-    y: 20,
-    stagger: 0.18,
-    ease: "power3.out"
-  })
-})
 </script>
 
 <template>
 
    <section class="w-full mt-5 bg-[#F5F7FA] py-10 px-6 lg:px-20">
-      <div class="achievementGsap flex flex-col md:flex-row lg:flex-row justify-center items-center gap-10">
+      <div class="flex flex-col md:flex-row lg:flex-row justify-center items-center gap-10">
 
         <!-- LEFT TEXT -->
         <div>
@@ -70,7 +46,7 @@ onMounted(()=>{
         </div>
 
         <!-- RIGHT GRID -->
-        <div  class="achievementShow grid grid-cols-2 gap-x-10 gap-y-6">
+        <div class="grid grid-cols-2 gap-x-10 gap-y-6">
 
           <div 
             v-for="value in achievementData" 

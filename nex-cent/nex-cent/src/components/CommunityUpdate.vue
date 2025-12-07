@@ -1,14 +1,9 @@
 <script setup>
-import { onMounted } from 'vue'
 import communitUpdateImg1 from '../assets/communityUpdate1.jpg'
 import communitUpdateImg2 from '../assets/communityUpdate2.jpg'
 import communitUpdateImg3 from '../assets/communityUpdate3.jpg'
 import Ptag from './Ptag.vue'
 import Htag2 from './Htag2.vue'
-import { gsap } from "gsap"
-import ScrollTrigger from "gsap/ScrollTrigger"
-
-gsap.registerPlugin(ScrollTrigger)
 
 const communitUpdateData=[
     {
@@ -24,24 +19,6 @@ const communitUpdateData=[
         description: 'Revamping the Membership Model with Triathlon Australia'
     },
 ]
-
-onMounted(()=>{
-     gsap.from(".communityUpdate-card", {
-    scrollTrigger: {
-      trigger: ".communityUpdate-card",
-      start: "top 85%",
-      toggleActions: "play none none none"
-      // play = scroll-a çatanda animasiya et
-      // none = başqa heç nə etmə
-    },
-    duration: 0.9,
-    scale: 0.8,
-    opacity: 0,
-    y: 20,
-    stagger: 0.18,
-    ease: "power3.out"
-  })
-})
 const pTagText = 'The Nextcent blog is the best place to read about the latest membership insights, trends and more. See who\'s joining the community, read about how our community are increasing their membership income and lot\'s more.​';
 </script>
 
@@ -50,9 +27,9 @@ const pTagText = 'The Nextcent blog is the best place to read about the latest m
     <section class=" flex flex-col justify-center items-center mt-5 ">
         <div class="flex flex-col justify-center items-center gap-5">
             <Htag2 class=" w-[23.162rem] md:w-[34.264rem] lg:w-[48.289rem] h-[0.914rem] md:h-1.25 lg:h-7.75" :text="'Caring is the new marketing'"/>
-            <Ptag class="trackin-normal text-center w-[13.790rem]! md:!w-[20.625rem] lg:!w-[27.321rem] " :text="pTagText"/>
+            <Ptag class="trackin-normal text-center !w-[13.790rem] md:!w-[20.625rem] lg:!w-[27.321rem] " :text="pTagText"/>
             <div class="grid grid-cols-1 lg:grid-cols-3 gap-5 ">
-                <div class="communityUpdate-card relative flex flex-col justify-center items-center w-[7.679rem] md:w-[11.324rem] lg:w-[16.009rem] h-[7.679rem] md:h-[11.324rem] lg:h-[15.987rem] opacity-100" v-for="value in communitUpdateData" :key="value.description">
+                <div class="relative flex flex-col justify-center items-center w-[7.679rem] md:w-[11.324rem] lg:w-[16.009rem] h-[7.679rem] md:h-[11.324rem] lg:h-[15.987rem] opacity-100" v-for="value in communitUpdateData" :key="value.description">
                     <img :src="value.img" alt="">
                     <div class="absolute -bottom-5 flex flex-col justify-center items-center
                         w-[6.696rem]
@@ -90,7 +67,7 @@ const pTagText = 'The Nextcent blog is the best place to read about the latest m
                             w-[2.9625rem]
                             md:w-17.125
                             lg:w-24.25
-                            h-2.5
+                            h-[0.625rem]
                             md:h-3
                             lg:h-5
                             opacity-100

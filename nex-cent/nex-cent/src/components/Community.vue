@@ -1,16 +1,10 @@
 <script setup>
-import { onMounted } from 'vue'
 import GroupImg from '../assets/GroupIcon.webp'
 import MemberShipImg from '../assets/MembershipIcon.webp'
 import AssociationImg from '../assets/AssociationIcon.webp'
 import Ptag from './Ptag.vue'
 import Htag2 from './Htag2.vue'
 import { reactive } from 'vue'
-import { gsap } from "gsap"
-import ScrollTrigger from "gsap/ScrollTrigger"
-
-gsap.registerPlugin(ScrollTrigger)
-
 
 const communitData=reactive([
     {
@@ -30,30 +24,11 @@ const communitData=reactive([
     },
 ])
 const pTagText = 'Who is Nextcent suitable for?';   
-
-onMounted(() => {
-  gsap.from(".community-card", {
-    scrollTrigger: {
-      trigger: ".community-card",
-      start: "top 85%",
-      toggleActions: "play none none none"
-      // play = scroll-a çatanda animasiya et
-      // none = başqa heç nə etmə
-    },
-    duration: 0.9,
-    scale: 0.8,
-    opacity: 0,
-    y: 20,
-    stagger: 0.18,
-    ease: "power3.out"
-  })
-})
-
 </script>
 
 <template>
 
-   <section id="communitySection" class="w-full bg-[#F5F7FA] p-4">
+   <section class="w-full bg-[#F5F7FA] p-4">
       <div class="flex flex-col justify-center items-center gap-3">
             <div class="flex flex-col justify-center items-center text-center gap-3">
                 <Htag2 class="w-[11.310rem] md:w-[34.264rem] lg:w-[48.289rem]" :text="' Manage your entire community in a single system'"/>
@@ -78,7 +53,6 @@ onMounted(() => {
                     rounded-[0.348rem]
                     opacity-100
                     flex flex-col items-center justify-center
-                    community-card 
                     " 
                     v-for="value in communitData">
                         <img class="
@@ -90,7 +64,7 @@ onMounted(() => {
                             lg:h-[2.436rem]
                             opacity-100
                             " :src="value.img" alt="Icon" />
-                            <Htag2 class="font-bold w-[5.571rem] md:w-[8rem] lg:w-[11.616rem] h-[1.5625rem] md:h-[7.5rem] lg:h-12.75" :text="value.title"/>
+                            <Htag2 class="font-bold w-[5.571rem] md:w-[8.rem] lg:w-[11.616rem] h-[1.5625rem] md:h-[7.5rem] lg:h-12.75" :text="value.title"/>
                             <Ptag class="tracking-normal text-center !w-[5.237rem] md:!w-[7.35rem] lg:!w-[10.92rem]" :text="value.description"/>
                     </div>
                 </div>
