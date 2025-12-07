@@ -1,0 +1,81 @@
+@import "tailwindcss";
+
+/* .client-text {
+  @apply font-inter font-normal tracking-normal text-[#717171] opacity-100 mt-1;
+}
+
+.client-text {
+  @apply 
+    text-[0.334rem] leading-[0.47rem] w-[23.579rem] h-[0.522rem]
+    md:text-[0.556rem] md:leading-[0.782rem] md:w-[34.264rem] md:h-3.25
+    lg:text-[0.696rem] lg:leading-[1.044rem] lg:w-[48.289rem] lg:h-4.25;
+} */
+/* .clients-title {
+  @apply font-inter font-semibold tracking-normal text-center text-[#4D4D4D] opacity-100;
+  @apply 
+    text-[0.751rem] leading-[0.914rem] w-[23.579rem] h-3.75
+    md:text-[1.134rem] md:leading-[1.366rem] md:w-[34.264rem] md:h-5.5
+    lg:text-[1.566rem] lg:leading-[1.914rem] lg:w-[48.289rem] lg:h-7.75;
+}
+.clients-desc {
+  @apply font-inter font-normal tracking-normal text-center text-[#717171] opacity-100;
+  @apply 
+    text-[0.334rem] leading-[0.47rem] w-[23.579rem] h-[0.522rem]
+    md:text-[0.556rem] md:leading-[0.782rem] md:w-[34.264rem] md:h-3.25
+    lg:text-[0.696rem] lg:leading-[1.044rem] lg:w-[48.289rem] lg:h-4.25;
+}
+.clients-grid {
+  @apply grid grid-cols-7 gap-4 mt-8 opacity-100 mx-auto;
+  @apply 
+    w-[23.579rem] h-8
+    md:w-[34.264rem] md:h-16
+    lg:w-[48.289rem] lg:h-20;
+}
+.client-logo {
+  @apply object-contain opacity-100;
+  @apply 
+    h-[0.835rem]
+    md:h-[1.2rem]
+    lg:h-12;
+} */
+ .p-layout-size {
+  @apply !w-[15.608rem] md:!w-[24.208rem] lg:!w-[32.541rem];
+}
+/* * {
+  outline: 1px solid red !important;
+} */
+/* .hero-section {
+  @apply w-full 
+         gap-[4.524rem]
+         pt-[4.176rem] pb-[4.176rem]
+         px-4 md:px-[6.264rem]
+         bg-[#F5F7FA]
+         opacity-100;
+}
+
+.hero-text {
+  @apply w-52 md:w-[20rem] lg:w-[28.582rem]
+         h-24 md:h-36 lg:h-[12.056rem]
+         flex flex-col
+         gap-[1.392rem]
+         opacity-100;
+}
+
+.hero-title {
+  @apply font-inter font-semibold
+         text-[1rem] md:text-[1.5rem] lg:text-[2.784rem]
+         leading-[1.334rem] lg:leading-[3.306rem]
+         tracking-normal
+         w-52 md:w-[20rem] lg:w-[28.582rem]
+         h-6 md:h-12 lg:h-[26.5rem]
+         opacity-100;
+}
+
+.hero-image {
+  @apply w-[10rem] md:w-52 lg:w-[17rem];
+} */
+
+.footer-title{
+  @apply w-[3.338rem] md:w-[5.1rem] lg:w-[6.96rem] h-[0.625rem] md:h-[0.9rem] lg:h-[1.25rem]
+
+}
